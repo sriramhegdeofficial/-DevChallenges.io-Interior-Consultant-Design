@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" >
+    <title>DevChallenges.io | Interior Consultant</title>
+</head>
+<body>
+    <div class="hamburger-menu">
+        <span class="hamburger-first hamburger-line-1"></span>
+        <span class="hamburger-second hamburger-line-2"></span>
+        <span class="hamburger-third hamburger-line-3"></span>
+    </div>
+    <div id="my-collapse-navbar" class="collapse-navbar collapse-animation">
+        <div class="collapse-nav-wrapper">
+            <a href="" class="collapse-nav-link active-link">home</a>
+            <a href="" class="collapse-nav-link">collection</a>
+            <a href="" class="collapse-nav-link">about</a>
+            <a href="" class="collapse-nav-link">contact</a>
+        </div>
+    </div>
+    <header>
+        <div class="logo">
+            <h2>this interior</h2>
+        </div>
+        <nav>
+            <ul class="nav-ul">
+                <li class="nav-links">home</li>
+                <li class="nav-links">collection</li>
+                <li class="nav-links">about</li>
+                <li class="nav-links">contact</li>
+            </ul>
+            
+        </nav>
+       
+    </header>
+    <main>
+        <div class="headline-wrapper">
+            <h3>Modern interior</h3>
+            <p>A full-Service residential & commercial 
+                interior design and staging company 
+                offering professional organizing & 
+                eco-services.</p>
+                <div class="read-more-wrapper">
+                    <a href="#">Read More</a>
+                    <span class="material-icons right-arrow material-icons md-24">
+                        arrow_right_alt
+                    </span>
+                </div>
+        </div>
+        <div class="image-wrapper">
+            <img class="interior-design-img" src="./assets/photo1.png" alt="interior design image" />
+            <div class="designer-box-wrapper">
+                <div class="designer-info-wrapper">
+                    <img src="./assets/photo2.png" alt="Aliza Webber image">
+                    <div class="bio-wrapper">
+                        <h4>Aliza Webber</h4>
+                        <p>Interior designer</p>
+                    </div>
+                </div>
+                <p class="designed-year-by">Designed in 2020 by Aliza Webber</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>Sriram @ DevChallenges.io</footer>
+
+    <script>
+        
+        var isHamburgerMenuClicked = false;
+
+
+        var hamburgerMenu = document.querySelector('.hamburger-menu');
+            hamburgerMenu.addEventListener('click', function() {
+            var hamburgerMenuSpan2 = document.querySelector('.hamburger-second');
+            var hamburgerMenuSpan1 = document.querySelector('.hamburger-first');
+            var hamburgerMenuSpan3 = document.querySelector('.hamburger-third');
+
+            // var collapseNavbar = document.querySelector('.collapse-animation');
+
+            if(!isHamburgerMenuClicked) {
+                document.getElementById("my-collapse-navbar").style.width = "100%";
+                isHamburgerMenuClicked = !isHamburgerMenuClicked;
+            }else {
+                document.getElementById("my-collapse-navbar").style.width = "0";
+                isHamburgerMenuClicked = !isHamburgerMenuClicked;
+            }
+           
+            
+            // if (collapseNavbar.classList.contains("animate-collapse-out")) {
+            //     collapseNavbar.classList.remove("animate-collapse-out");
+            //     collapseNavbar.classList.add("animate-collapse-in");
+            // } else {
+            //     collapseNavbar.classList.add("animate-collapse-out");
+            //     collapseNavbar.classList.remove("animate-collapse-in");
+            // }
+
+
+            if (hamburgerMenuSpan1.classList.contains("animate-1-out")) {
+                hamburgerMenuSpan1.classList.remove("animate-1-out");
+                hamburgerMenuSpan1.classList.add("animate-1-in");
+            } else {
+                hamburgerMenuSpan1.classList.add("animate-1-out");
+                hamburgerMenuSpan1.classList.remove("animate-1-in");
+            }
+
+            if (hamburgerMenuSpan2.classList.contains("animate-2-out")) {
+                hamburgerMenuSpan2.classList.remove("animate-2-out");
+                hamburgerMenuSpan2.classList.add("animate-2-in");
+            } else {
+                hamburgerMenuSpan2.classList.add("animate-2-out");
+                hamburgerMenuSpan2.classList.remove("animate-2-in");
+            }
+
+            if (hamburgerMenuSpan3.classList.contains("animate-3-out")) {
+                hamburgerMenuSpan3.classList.remove("animate-3-out");
+                hamburgerMenuSpan3.classList.add("animate-3-in");
+            } else {
+                hamburgerMenuSpan3.classList.add("animate-3-out");
+                hamburgerMenuSpan3.classList.remove("animate-3-in");
+            }
+
+});
+    
+            
+                
+            
+       
+    </script>
+</body>
+</html>
