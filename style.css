@@ -345,7 +345,10 @@ footer {
     
   }
 
-  
+  .stop-scrolling {
+    height: 100%;
+    overflow: hidden;
+  }
 
 
 
@@ -364,6 +367,7 @@ footer {
 
         display: flex;
         height: 100%;
+        min-height: 100%;
         width: 0;
         position: fixed;
         z-index: 95;
