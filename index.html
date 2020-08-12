@@ -21,6 +21,7 @@
             <a href="" class="collapse-nav-link">contact</a>
         </div>
     </div>
+    <div class="main-container">
     <header>
         <div class="logo">
             <h2>this interior</h2>
@@ -66,6 +67,7 @@
     </main>
 
     <footer>Sriram @ DevChallenges.io</footer>
+</div>
 
     <script>
         
@@ -83,13 +85,13 @@
             if(!isHamburgerMenuClicked) {
                 document.getElementById("my-collapse-navbar").style.width = "100%";
                 document.querySelector("body").classList.add("stop-scrolling");
-                document.querySelector("body").classList.add("hide");
+                document.querySelector(".main-container").classList.add("hide");
 
                 isHamburgerMenuClicked = !isHamburgerMenuClicked;
             }else {
                 document.getElementById("my-collapse-navbar").style.width = "0";
                 document.querySelector("body").classList.remove("stop-scrolling");
-                document.querySelector("body").classList.remove("hide");
+                document.querySelector(".main-container").classList.remove("hide");
                 isHamburgerMenuClicked = !isHamburgerMenuClicked;
             }
            
