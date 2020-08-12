@@ -350,6 +350,9 @@ footer {
     overflow: hidden;
   }
 
+  .hide {
+      visibility: none;
+  }
 
 
 .hamburger-menu span {
