@@ -73,12 +73,45 @@
         
         var isHamburgerMenuClicked = false;
 
+        var hamburgerMenuSpan2 = document.querySelector('.hamburger-second');
+        var hamburgerMenuSpan1 = document.querySelector('.hamburger-first');
+        var hamburgerMenuSpan3 = document.querySelector('.hamburger-third');
+
+        function resetMainContainer(mediaQuery) {
+            if(isHamburgerMenuClicked) {
+                if (mediaQuery.matches) { // If media query matches
+                 
+                document.querySelector("body").classList.remove("stop-scrolling");
+                document.querySelector(".main-container").classList.remove("hide");
+                document.getElementById("my-collapse-navbar").style.width = "0";
+
+                hamburgerMenuSpan1.classList.remove("animate-1-out");
+                hamburgerMenuSpan1.classList.add("animate-1-in");
+
+                hamburgerMenuSpan2.classList.remove("animate-2-out");
+                hamburgerMenuSpan2.classList.add("animate-2-in");
+
+                hamburgerMenuSpan3.classList.remove("animate-3-out");
+                hamburgerMenuSpan3.classList.add("animate-3-in");
+
+
+                isHamburgerMenuClicked = false;
+            } 
+        }
+    }
+
+        var mediaQuery = window.matchMedia("(min-width: 950px)")
+        resetMainContainer(mediaQuery) // Call listener function at run time
+        mediaQuery.addListener(resetMainContainer) 
+        
+        // Attach listener function on state changes
+
+      
+
 
         var hamburgerMenu = document.querySelector('.hamburger-menu');
             hamburgerMenu.addEventListener('click', function() {
-            var hamburgerMenuSpan2 = document.querySelector('.hamburger-second');
-            var hamburgerMenuSpan1 = document.querySelector('.hamburger-first');
-            var hamburgerMenuSpan3 = document.querySelector('.hamburger-third');
+            
 
             // var collapseNavbar = document.querySelector('.collapse-animation');
 
